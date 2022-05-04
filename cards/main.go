@@ -1,8 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
-	var card string = "Ace of Spades"
-	fmt.Println(card)
+	deck := readDeck("my_cards.txt")
+	deck.shuffle()
+	deck.printDeck()
+	deck.saveDeck("my_cards.txt")
 }
